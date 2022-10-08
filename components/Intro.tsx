@@ -20,6 +20,13 @@ return (
   </Text>
 </Stack>
 </Flex>
+<Box></Box>
+<Box borderRadius='lg' borderWidth='3px' h={'100px'}>
+    hey hey hey
+</Box>
+<Box borderRadius='lg' borderWidth='1px' h={'100px'}>
+    hey hey hey
+</Box>
 </SimpleGrid>
 
  )
