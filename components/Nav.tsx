@@ -38,26 +38,19 @@ export default function Simple() {
               spacing={60}
               display={{ base: 'none', md: 'flex' }}>
                     <NextLink href='/' passHref>
-                    <Link><Icon w={5} h={5} as={BsFillHouseDoorFill} /></Link>
+                    {/* add in # here */}
+                    <Link>GWEI</Link>
                     </NextLink>
-                    <NextLink href='/about' passHref>
-                        <Link>About Me</Link>
-                    </NextLink>
-                    <NextLink href='/projects' passHref>
-                        <Link>My Projects</Link>
-                    </NextLink>
-                    <NextLink href='/writing' passHref>
-                        <Link>Writing</Link>
-                    </NextLink>
-                    <NextLink href='/contact' passHref>
-                        <Link>Contact Me</Link>
-                    </NextLink>
+
             </HStack>
           </HStack>
           <Flex alignItems={'center'}>
-          <Button onClick={toggleColorMode}>
+          <NextLink href='/contact' passHref>
+            <Link>Contact Me</Link>
+          </NextLink>
+          <Button onClick={toggleColorMode} ml='5'>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
+          </Button>
           </Flex>
         </Flex>
 

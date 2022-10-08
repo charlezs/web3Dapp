@@ -21,11 +21,17 @@ return (
 </Flex>
 <Divider></Divider>
 <SimpleGrid mt='4'columns={2} spacing={'5'}>
-<Box borderRadius='lg' borderWidth='3px' h={'100px'}>
-    hey hey hey
+<Box borderRadius='lg' borderWidth='3px' h={'425'} textAlign={'center'}>
+    <Heading mb='2' mt='2'> 
+      Wallet 
+    </Heading>
+    <Divider alignItems={'center'}/>
 </Box>
-<Box borderRadius='lg' borderWidth='1px' h={'100px'}>
-    hey hey hey
+<Box borderRadius='lg' borderWidth='3px' h={'425'} textAlign={'center'}>
+<Heading mb='2' mt='2'> 
+      History 
+    </Heading>
+    <Divider alignItems={'center'}/>
 </Box>
 </SimpleGrid>
 
