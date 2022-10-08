@@ -1,11 +1,10 @@
-import { Heading, Text, Box, Flex, Stack, Image,Center, Square, SimpleGrid, Container} from '@chakra-ui/react';
+import { Heading, Text, Box, Flex, Stack, Image,Center, Square, SimpleGrid, Divider, Container} from '@chakra-ui/react';
 
 export default function IntroMe() {
 
 return (
-
-<SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
-<Flex direction={'row'} color='white'>
+<Container maxW={'5xl'}>
+<Flex direction={'row'} w='700px'color='white' mb={'2'}>
 <Image
   borderRadius='full'
   boxSize='150px'
@@ -20,7 +19,8 @@ return (
   </Text>
 </Stack>
 </Flex>
-<Box></Box>
+<Divider></Divider>
+<SimpleGrid mt='4'columns={2} spacing={'5'}>
 <Box borderRadius='lg' borderWidth='3px' h={'100px'}>
     hey hey hey
 </Box>
@@ -28,6 +28,8 @@ return (
     hey hey hey
 </Box>
 </SimpleGrid>
+
+</Container>
 
  )
 }
