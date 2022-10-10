@@ -1,5 +1,4 @@
 import { Heading, Text, Box, Flex, Stack, Image,Center, Square, SimpleGrid, Divider, Container} from '@chakra-ui/react';
-import Featured from './Feature'
 
 export default function IntroMe() {
 
@@ -35,8 +34,6 @@ return (
     <Divider alignItems={'center'}/>
 </Box>
 </SimpleGrid>
-<Featured />
-
 </Container>
 
  )
