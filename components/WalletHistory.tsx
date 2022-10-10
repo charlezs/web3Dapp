@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
 export default function HistoryCards() {
-    const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0xc5102fE9359FD9a28f877a67E36B0F050d81a3CC&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
+    const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x62E724226009DE1EDb66b8b8be841781aeb256de&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
     const [data, setData] = useState(null)
 
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function HistoryCards() {
             pr='3'
             >
                 {/* TX TYPE */}
-                {data.result[1].functionName.split("(")[0]}
+                {data.result[1].functionName.split("(")}
             </Text>
             <Text         pr='3'>
                 {/* DATE */}
