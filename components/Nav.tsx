@@ -17,7 +17,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-
+import GweiTrack from './Gas';
 
 export default function Simple() {
 
@@ -49,18 +49,7 @@ export default function Simple() {
             display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
-          <HStack pl={6} spacing={100} alignItems={'center'}>
-            <HStack
-              as={'nav'}
-              spacing={60}
-              display={{ base: 'none', md: 'flex' }}>
-                    <NextLink href='/' passHref>
-                    {/* add in # here */}
-                    <Link>{data.result.SafeGasPrice} GWEI</Link>
-                    </NextLink>
-
-            </HStack>
-          </HStack>
+          <GweiTrack />
           <Flex alignItems={'center'}>
           <NextLink href='/contact' passHref>
             <Link>Contact Me</Link>
