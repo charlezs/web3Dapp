@@ -15,28 +15,12 @@ import {
 import NextLink from "next/link"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
 import GweiTrack from './Gas';
 
 export default function Simple() {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
-  const [data, setData] = useState(null)
-
-  const url = 'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
-
-  useEffect(() => {
-      axios.get(url).then((response) => {
-          setData(response.data)
-      }).catch((error) => {
-          console.log(error)
-      })
-  }, [])
-
-
-  if (!data) return null
 
   return (
 

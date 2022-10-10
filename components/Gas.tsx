@@ -4,7 +4,7 @@ import { HStack, Link } from '@chakra-ui/react'
 import NextLink from "next/link"
 
 export default function GweiTrack() {
-    const url = 'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
+    const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x62E724226009DE1EDb66b8b8be841781aeb256de&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
     const [data, setData] = useState(null)
 
     useEffect(() => {
