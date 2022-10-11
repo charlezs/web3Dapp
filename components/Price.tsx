@@ -1,10 +1,10 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { HStack, Link } from '@chakra-ui/react'
+import { HStack, Text } from '@chakra-ui/react'
 import NextLink from "next/link"
 
-export default function GweiTrack() {
-    const url = 'https://www.etherchain.org/api/gasnow'
+export default function PriceTrack() {
+    const url = 'https://api.coingecko.com/api/v3/coins/ethereum?tickers=true&market_data=false&community_data=false&developer_data=false&sparkline=false'
     const [data, setData] = useState(null)
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function GweiTrack() {
       spacing={60}
       display={{ base: 'none', md: 'flex' }}>
             <NextLink href='/' passHref>
-            <Link> {data.data.standard/1000000000} GWEI</Link>
+            <Text> ETH Price: ${data.tickers[0].last} USD</Text>
             </NextLink>
 
     </HStack>

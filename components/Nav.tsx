@@ -16,7 +16,7 @@ import NextLink from "next/link"
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import GweiTrack from './Gas';
-
+import PriceTrack from './Price';
 export default function Simple() {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -36,7 +36,7 @@ export default function Simple() {
           <GweiTrack />
           <Flex alignItems={'center'}>
           <NextLink href='/contact' passHref>
-            <Link>Contact Me</Link>
+            <Link><PriceTrack /></Link>
           </NextLink>
           <Button onClick={toggleColorMode} ml={5}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -60,7 +60,7 @@ export default function Simple() {
                         <Link>Writing</Link>
                     </NextLink>
                     <NextLink href='/contact' passHref>
-                        <Link>Contact Me</Link>
+                        <Link> <PriceTrack /></Link>
                     </NextLink>
             </Stack>
           </Box>
