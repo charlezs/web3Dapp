@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function HistoryCards() {
 
-  const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x62E724226009DE1EDb66b8b8be841781aeb256de&startblock=0&endblock=99999999&page=1&offset=20&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
+  const url = 'https://api.covalenthq.com/v1/1/address/charles1.eth/transactions_v2/?quote-currency=USD&format=JSON&block-signed-at-asc=false&no-logs=false&key=ckey_a975e5abaecd4ae1911d109bc45'
   const [data, setData] = useState(null) as any
 
   useEffect(() => {
@@ -27,7 +27,7 @@ return (
               <Flex overflowY="auto" overflowX="auto" maxH={'359'} mt='1'>
                 <Center w='100%'>
                     <VStack>
-                      { data.result && data.result.map((o) => (
+                      { data.data.items && data.data.items.map((o) => (
                               <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'990'} w='100%'>
                               <HStack>
                                 <Image
@@ -40,17 +40,23 @@ return (
                                 textTransform={'uppercase'}
                                 fontWeight={'bold'}
                                 >
-                                    {o.functionName.split("(")[0]}
+                                   {/* name of events */}
+                                   {o.log_events[0]?.decoded?.name}
+                                   
+
+                                   
                                 </Text>
                                 <Text >
-                                    {o.timeStamp}
+                                  {/* time / date of tx */}
+                                    Date: {o.block_signed_at.split("T")[0]}
                                 </Text>
 
                                 <Text>
-                                    Cost:  {o.value/1000000000000000000}
+                                  {/* value of tx */}
+                                  Amount: {o.value/1000000000000000000}
                                 </Text>
-                                </HStack>
-                              </Box>
+                              </HStack>
+                              </Box>  
                           )
                         )}
                       </VStack>
