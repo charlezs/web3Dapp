@@ -1,5 +1,4 @@
-import { Heading, Text, Box, Flex, Stack, Image,Center, Square, SimpleGrid, Divider, Container, HStack, VStack} from '@chakra-ui/react';
-import React, { useState, useEffect } from 'react'
+import { Heading, Text, useColorModeValue, Flex, Stack, Image,Center, Square, SimpleGrid, Divider, Container, HStack, VStack} from '@chakra-ui/react';
 import HistoryCards from './WalletHistory';
 import Amount from './Amount';
 import TokenCard from './TokenHeld';
@@ -10,10 +9,11 @@ return (
 <Image
   borderRadius='full'
   boxSize='150px'
-  src='https://cdn.discordapp.com/attachments/985521628500877322/1028140475665887232/unknown.png'
+  src='https://media.discordapp.net/attachments/985521628500877322/1029872611162857593/White_Formal_LinkedIn_Profile_Picture.png'
 />
 <Stack ml={'10'}>
-  <Heading fontSize={'5xl'}>Portfolio</Heading>
+  <Heading fontSize={'5xl'}             color={useColorModeValue('black', 'white')}
+>ETH Wallet Spy</Heading>
 <Amount />
 </Stack>
 </Flex>

@@ -20,7 +20,7 @@ export default function Amount() {
 
 return (
     <Text color={'gray.500'} fontSize={'4xl'}>
-    {data.result.slice(0, 3)/100} ETH
+    Current ETH Holdings {data.result.slice(0, 3)/100} ETH
     </Text>
  )
 }

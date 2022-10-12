@@ -51,14 +51,14 @@ return (
                                     borderRadius='full'
                                     boxSize='50px'
                                     m='1'
-                                    src={data.data.items[2].logo_url}
+                                    src={data.data.items[1].logo_url}
                                 />
                                 <Text >
-                                    {data.data.items[2].contract_name}
+                                    {data.data.items[1].contract_name}
                                 </Text>
 
                                 <Text>
-                                    {data.data.items[2].balance/1000000000000000000}                                
+                                    {data.data.items[1].balance/1000000000000000000}                                
                                 </Text>
                                 </HStack>
                               </Box>
