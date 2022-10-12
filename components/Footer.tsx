@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { IoMdMailUnread } from 'react-icons/io';
+  import { IoMdMailUnread, IoLogoTwitter, IoIosVideocam } from 'react-icons/io';
   import { ReactNode } from 'react';
   
   const SocialButton = ({
@@ -58,6 +58,12 @@ import {
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Email Me'} href={'mailto:charlesnnyabeze@gmail.com'}>
               <IoMdMailUnread />
+            </SocialButton>
+            <SocialButton label={'Follow Me'} href={'https://twitter.com/intent/user?screen_name=learn_charles'}>
+              <IoLogoTwitter />
+            </SocialButton>
+            <SocialButton label={'Chat with Me'} href={'https://calendly.com/charles1x/meet-charles?month=2022-10'}>
+              <IoIosVideocam />
             </SocialButton>
           </Stack>
         </Container>
