@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 
 export default function HistoryCards() {
 
-  const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x62E724226009DE1EDb66b8b8be841781aeb256de&startblock=0&endblock=99999999&page=1&offset=10&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
+  const url = 'https://api.etherscan.io/api?module=account&action=txlist&address=0x62E724226009DE1EDb66b8b8be841781aeb256de&startblock=0&endblock=99999999&page=1&offset=20&sort=asc&apikey=RAU1GI9TMM4WDJ2IHU5V8YE2T36CBAC696'
   const [data, setData] = useState(null) as any
 
   useEffect(() => {
@@ -28,8 +28,8 @@ return (
                 <Center w='100%'>
                     <VStack>
                       { data.result && data.result.map((o) => (
-                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'5'} w='100%'>
-                                <HStack>
+                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'990'} w='100%'>
+                              <HStack>
                                 <Image
                                     borderRadius='full'
                                     boxSize='50px'
@@ -47,8 +47,7 @@ return (
                                 </Text>
 
                                 <Text>
-                                    Amount:
-                                    {o.value/1000000000000000000}
+                                    Cost:  {o.value/1000000000000000000}
                                 </Text>
                                 </HStack>
                               </Box>

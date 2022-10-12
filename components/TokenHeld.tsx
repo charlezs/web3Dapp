@@ -27,22 +27,58 @@ return (
               <Flex overflowY="auto" overflowX="auto" maxH={'359'} mt='1'>
                 <Center w='100%'>
                     <VStack>
-                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'5'} w='100%'>
+                        <Box mt={1}>
+                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={1} w='100%'>
                                 <HStack>
                                 <Image
                                     borderRadius='full'
                                     boxSize='50px'
                                     m='1'
-                                    src={data.data.items[1].logo_url}
+                                    src={data.data.items[0].logo_url}
                                 />
                                 <Text >
-                                    {data.data.items[1].contract_name}
+                                    {data.data.items[0].contract_name}
                                 </Text>
 
                                 <Text>
-                                    {data.data.items[1].balance/1000000000000000000}                                
+                                    {data.data.items[0].balance/1000000000000000000}                                
                                 </Text>
                                 </HStack>
+                              </Box>
+                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={1} w='100%'>
+                                <HStack>
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='50px'
+                                    m='1'
+                                    src={data.data.items[2].logo_url}
+                                />
+                                <Text >
+                                    {data.data.items[2].contract_name}
+                                </Text>
+
+                                <Text>
+                                    {data.data.items[2].balance/1000000000000000000}                                
+                                </Text>
+                                </HStack>
+                              </Box>
+                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={1} w='100%'>
+                                <HStack>
+                                <Image
+                                    borderRadius='full'
+                                    boxSize='50px'
+                                    m='1'
+                                    src={data.data.items[22].logo_url}
+                                />
+                                <Text >
+                                    {data.data.items[22].contract_name}
+                                </Text>
+
+                                <Text>
+                                    {data.data.items[22].balance/1000000000000000000}                                
+                                </Text>
+                                </HStack>
+                              </Box>
                               </Box>
                       </VStack>
                    </Center>
