@@ -45,40 +45,6 @@ return (
                                 </Text>
                                 </HStack>
                               </Box>
-                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={1} w='100%'>
-                                <HStack>
-                                <Image
-                                    borderRadius='full'
-                                    boxSize='50px'
-                                    m='1'
-                                    src={data.data.items[1].logo_url}
-                                />
-                                <Text >
-                                    {data.data.items[1].contract_name}
-                                </Text>
-
-                                <Text>
-                                    {data.data.items[1].balance/1000000000000000000}                                
-                                </Text>
-                                </HStack>
-                              </Box>
-                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={1} w='100%'>
-                                <HStack>
-                                <Image
-                                    borderRadius='full'
-                                    boxSize='50px'
-                                    m='1'
-                                    src={data.data.items[22].logo_url}
-                                />
-                                <Text >
-                                    {data.data.items[22].contract_name}
-                                </Text>
-
-                                <Text>
-                                    {data.data.items[22].balance/1000000000000000000}                                
-                                </Text>
-                                </HStack>
-                              </Box>
                               </Box>
                       </VStack>
                    </Center>
