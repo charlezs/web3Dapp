@@ -19,7 +19,7 @@ export default function HistoryCards() {
   if (!data) return null
 
 return (
-        <Box borderRadius='lg' borderWidth='3px' textAlign={'center'} w='100%'>
+        <Box borderRadius='lg' borderWidth='3px' textAlign={'center'} w='100%' key={'o'}>
             <Heading mb='2' mt='2'> 
               History 
             </Heading>
