@@ -28,7 +28,7 @@ return (
                 <Center w='100%'>
                     <VStack>
                       { data.data.items && data.data.items.map((o) => (
-                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'990'} w='100%'>
+                              <Box borderRadius='lg' borderWidth='3px' p={'3'} mt={'990'} w='100%' key={"o"}>
                               <HStack>
                                 <Image
                                     borderRadius='full'
